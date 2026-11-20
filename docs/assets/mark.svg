@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Psst">
+  <defs>
+    <clipPath id="bubble">
+      <rect x="10" y="38" width="108" height="72" rx="20"/>
+    </clipPath>
+  </defs>
+  <!-- bulle : corps + pointe -->
+  <path d="M28 104 L18 124 L50 106 Z" fill="#1B2738"/>
+  <rect x="10" y="38" width="108" height="72" rx="20" fill="#1B2738"/>
+  <!-- ruban -->
+  <g clip-path="url(#bubble)" fill="#FF9F1C">
+    <rect x="56" y="38" width="16" height="72"/>
+    <rect x="10" y="66" width="108" height="14"/>
+  </g>
+  <!-- nœud -->
+  <g fill="none" stroke="#FF9F1C" stroke-width="10" stroke-linejoin="round">
+    <path d="M64 36 C52 14 30 14 34 28 C37 38 54 38 64 36 Z"/>
+    <path d="M64 36 C76 14 98 14 94 28 C91 38 74 38 64 36 Z"/>
+  </g>
+  <circle cx="64" cy="36" r="9" fill="#FF9F1C"/>
+</svg>

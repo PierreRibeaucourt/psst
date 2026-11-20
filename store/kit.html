@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kit Chrome Web Store · Psst</title>
+  <link rel="icon" href="../brand/mark.svg" type="image/svg+xml">
+  <style>
+    @font-face { font-family: Nunito; src: url('../brand/fonts/Nunito-VariableFont_wght.ttf') format('truetype'); font-weight: 200 1000; }
+    :root { --navy: #1B2738; --orange: #FF9F1C; --cream: #FFF6E9; --sand: #F3E2C7; --muted: #5B6472; --ok: #1D7A3C; --warn: #B3261E; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--cream); color: #0F1720; font: 15px/1.55 system-ui, -apple-system, 'Segoe UI', sans-serif; }
+    .wrap { max-width: 980px; margin: 0 auto; padding: 32px 20px 80px; }
+    header { display: flex; align-items: center; gap: 16px; margin-bottom: 8px; }
+    header img { height: 40px; }
+    h1 { font: 900 32px Nunito, sans-serif; color: var(--navy); margin: 10px 0 4px; }
+    h2 { font: 900 24px Nunito, sans-serif; color: var(--navy); margin: 44px 0 6px; padding-top: 12px; border-top: 2px solid var(--sand); }
+    h3 { font: 800 16px Nunito, sans-serif; color: var(--navy); margin: 0; }
+    p.lead, .hint { color: var(--muted); }
+    nav.toc { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0 0; }
+    nav.toc a { padding: 4px 12px; border-radius: 999px; background: #fff; border: 1px solid var(--sand); color: var(--navy); text-decoration: none; font-weight: 600; font-size: 14px; }
+    .field { background: #fff; border: 1px solid var(--sand); border-radius: 12px; padding: 14px 16px; margin-top: 12px; }
+    .field .head { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+    .field .count { margin-left: auto; font-size: 13px; color: var(--muted); }
+    .field .count.over { color: var(--warn); font-weight: 700; }
+    .field pre { white-space: pre-wrap; word-wrap: break-word; margin: 10px 0 0; font: 14px/1.5 system-ui, sans-serif; background: var(--cream); border-radius: 8px; padding: 10px 12px; }
+    .field .value { margin-top: 8px; font-weight: 600; }
+    .tag { font-size: 12px; font-weight: 700; padding: 1px 8px; border-radius: 999px; background: var(--navy); color: #fff; }
+    .tag.en { background: #2E3D55; }
+    button.copy { border: 1px solid var(--sand); background: var(--orange); color: var(--navy); font-weight: 700; border-radius: 999px; padding: 3px 12px; cursor: pointer; }
+    button.copy.done { background: var(--ok); color: #fff; border-color: var(--ok); }
+    .checks { list-style: none; padding: 0; margin: 10px 0 0; }
+    .checks li { padding: 6px 0; border-bottom: 1px solid var(--sand); }
+    .checks li:last-child { border-bottom: 0; }
+    .yes::before { content: '☑ '; color: var(--ok); font-weight: 700; }
+    .no::before { content: '☐ '; color: var(--muted); }
+    .why { display: block; color: var(--muted); font-size: 13px; margin-left: 22px; }
+    .imgs { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px; margin-top: 10px; }
+    .imgs a { display: block; text-decoration: none; color: var(--muted); font-size: 12px; }
+    .imgs img { width: 100%; border-radius: 8px; border: 1px solid var(--sand); background: #fff; display: block; margin-bottom: 4px; }
+    .todo { background: #FFF0D6; border: 1px solid var(--orange); border-radius: 12px; padding: 12px 16px; margin-top: 12px; }
+    code { font-family: ui-monospace, Consolas, monospace; font-size: 13px; background: var(--cream); padding: 1px 6px; border-radius: 5px; }
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <header><img src="../brand/logo.svg" alt="Psst"></header>
+  <h1>Kit Chrome Web Store</h1>
+  <p class="lead">Tout ce qu’il faut saisir, onglet par onglet, dans le tableau de bord développeur. Chaque texte a son bouton « Copier » et
+    son compteur de caractères (en rouge si la limite est dépassée).</p>
+  <nav class="toc">
+    <a href="#package">Package</a><a href="#fiche">Fiche Store</a><a href="#confidentialite">Confidentialité</a>
+    <a href="#distribution">Distribution</a><a href="#test">Instructions de test</a><a href="#compte">Compte</a>
+  </nav>
+
+  <div class="todo"><strong>Avant d’envoyer :</strong> publie le site GitHub Pages (Settings › Pages › Branch <code>main</code>, dossier
+    <code>/docs</code>) pour que l’URL des règles de confidentialité réponde. Une fois l’extension publiée, colle son adresse dans
+    <code>STORE_URL</code> en bas de <code>docs/index.html</code>.</div>
+
+  <h2 id="package">Package</h2>
+  <div class="field"><div class="head"><h3>Fichier à envoyer</h3></div>
+    <div class="value"><code>.output/psst-for-amazon-1.0.0-chrome.zip</code></div>
+    <p class="hint">Généré par <code>npm run zip</code>. Le nom et la description de l’extension viennent du package (fichiers de langue
+      <code>en</code> et <code>fr</code>, anglais par défaut) : pas besoin de les saisir.</p>
+  </div>
+
+  <h2 id="fiche">Fiche Store</h2>
+  <p class="hint">Langue par défaut de la fiche : <strong>anglais</strong>. Ajoute ensuite le <strong>français</strong> (menu des langues de la
+    fiche) et saisis la description et les visuels français.</p>
+  <div id="listing"></div>
+
+  <div class="field"><div class="head"><h3>Catégorie</h3></div><div class="value">Shopping</div></div>
+  <div class="field"><div class="head"><h3>Contenu réservé aux adultes</h3></div><div class="value">Non</div></div>
+
+  <div class="field"><div class="head"><h3>Icône du Store (128 × 128)</h3></div>
+    <div class="imgs" style="grid-template-columns:repeat(auto-fill,128px)"><a href="assets/store-icon-128.png"><img src="assets/store-icon-128.png" alt="">store-icon-128.png</a></div></div>
+  <div class="field"><div class="head"><h3>Captures d’écran (1280 × 800)</h3><span class="tag en">EN</span></div>
+    <div class="imgs" id="shots-en"></div></div>
+  <div class="field"><div class="head"><h3>Captures d’écran (1280 × 800)</h3><span class="tag">FR</span></div>
+    <div class="imgs" id="shots-fr"></div></div>
+  <div class="field"><div class="head"><h3>Petite vignette promotionnelle (440 × 280)</h3></div>
+    <p class="hint">Non localisable : une seule pour toutes les langues.</p>
+    <div class="imgs"><a href="assets/small-tile-440x280.png"><img src="assets/small-tile-440x280.png" alt="">small-tile-440x280.png</a></div></div>
+  <div class="field"><div class="head"><h3>Grande bannière promotionnelle (1400 × 560)</h3></div>
+    <div class="imgs"><a href="assets/en/marquee-1400x560.png"><img src="assets/en/marquee-1400x560.png" alt="">en/marquee-1400x560.png</a>
+      <a href="assets/fr/marquee-1400x560.png"><img src="assets/fr/marquee-1400x560.png" alt="">fr/marquee-1400x560.png</a></div></div>
+  <div id="urls"></div>
+
+  <h2 id="confidentialite">Confidentialité</h2>
+  <p class="hint">Chaque texte existe en français et en anglais : colle la langue de ton choix (l’anglais accélère parfois l’examen).</p>
+  <div id="privacy"></div>
+
+  <div class="field"><div class="head"><h3>Code distant</h3></div>
+    <div class="value">Non, je n’utilise pas de code distant.</div>
+    <p class="hint">Tout le code est dans le package. Le serveur ne renvoie que des données chiffrées, jamais de code.</p></div>
+
+  <div class="field"><div class="head"><h3>Consommation des données : quelles données collectez-vous ?</h3></div>
+    <ul class="checks">
+      <li class="yes">Informations permettant d’identifier personnellement l’utilisateur
+        <span class="why">Les prénoms des membres du foyer, saisis par l’utilisateur, sont envoyés (chiffrés de bout en bout) au serveur de synchro.</span></li>
+      <li class="no">Information sur la santé</li>
+      <li class="no">Informations financières et de paiement
+        <span class="why">Aucun montant, moyen de paiement ni contenu d’achat n’est lu : seulement le numéro de commande (voir « Contenu du site Web »).</span></li>
+      <li class="no">Informations d’authentification
+        <span class="why">Aucun identifiant de l’utilisateur. Le code d’invitation est une clé générée par l’extension, pas un identifiant de compte.</span></li>
+      <li class="no">Communications personnelles</li>
+      <li class="no">Localisation
+        <span class="why">Les adresses IP ne sont ni journalisées ni conservées.</span></li>
+      <li class="no">Historique Web
+        <span class="why">Aucune liste des pages visitées n’est enregistrée.</span></li>
+      <li class="no">Activité de l’utilisateur</li>
+      <li class="yes">Contenu du site Web
+        <span class="why">Les numéros de commande lus sur les pages Amazon ; ceux des commandes cachées sont envoyés chiffrés au serveur.</span></li>
+    </ul>
+    <p class="hint" style="margin-top:10px">Coche aussi les trois certifications :</p>
+    <ul class="checks">
+      <li class="yes">Je ne vends ni ne transfère les données des utilisateurs à des tiers en dehors des cas d’utilisation approuvés</li>
+      <li class="yes">Je n’utilise ni ne transfère les données des utilisateurs à des fins sans rapport avec la fonctionnalité de base de mon article</li>
+      <li class="yes">Je n’utilise ni ne transfère les données des utilisateurs pour déterminer leur solvabilité ou à des fins de prêt</li>
+    </ul>
+  </div>
+  <div id="privacy-url"></div>
+
+  <h2 id="distribution">Distribution</h2>
+  <div class="field"><div class="head"><h3>Paiements</h3></div><div class="value">Sans frais</div></div>
+  <div class="field"><div class="head"><h3>Visibilité</h3></div><div class="value">Public</div>
+    <p class="hint">Pour un premier tour en famille avant le grand public : « Non répertorié », puis passer en « Public ».</p></div>
+  <div class="field"><div class="head"><h3>Régions</h3></div><div class="value">Toutes les régions</div></div>
+
+  <h2 id="test">Instructions de test</h2>
+  <div id="testing"></div>
+
+  <h2 id="compte">Compte</h2>
+  <div class="field"><div class="head"><h3>Adresse e-mail de contact (affichée sur la fiche)</h3></div>
+    <div class="value">pierre@ribeaucourt.fr</div>
+    <p class="hint">Paramètres › Compte › Adresse e-mail de contact. Il faudra la confirmer par e-mail.</p></div>
+</div>
+
+<script>
+  const LIMITS = { summary: 132, description: 16000, purpose: 1000, justification: 1000, url: 2048, testing: 5000 };
+
+  const LISTING = [
+    { title: 'Description détaillée', lang: 'EN', limit: LIMITS.description, text:
+`Sharing one Amazon account with your family? Gifts tend to give themselves away in “Your Orders”. Psst fixes that: hide an order from the people you choose, and it disappears from their order history.
+
+HOW IT WORKS
+1. Each person installs Psst in their own Chrome profile.
+2. One person creates the household; the others join with an invitation code.
+3. In “Your Orders”, click “Hide this order…” and tick the people who shouldn’t see it.
+
+WHAT PSST DOES
+• The hidden order disappears from those people’s order history, without a trace.
+• It never shows up, not even for a split second while the page loads.
+• Opened from an email or a link (order details, package tracking, invoice…), it shows a “No spoilers!” screen instead.
+• Optional reveal date: the order becomes visible again on its own on the day you pick.
+• You stay in control: you see who each order is hidden from, and you can undo it at any time.
+
+PRIVACY
+• Psst only reads order numbers. Never your credentials, addresses, payments or what you bought.
+• Household sync is end-to-end encrypted: our server can’t read your orders or your names.
+• No account to create, no ads, no tracking.
+• You can delete all of your household’s data from the extension.
+
+GOOD TO KNOW
+Psst prevents accidental spoilers: it doesn’t hide anything in the Amazon mobile app, confirmation emails, notifications or Alexa announcements.
+
+Works on amazon.com, amazon.ca, amazon.co.uk, amazon.ie, amazon.fr, amazon.com.be, amazon.de, amazon.it, amazon.es and amazon.nl.
+
+Psst is an independent project, not affiliated with Amazon. Amazon is a trademark of Amazon.com, Inc. or its affiliates.` },
+    { title: 'Description détaillée', lang: 'FR', limit: LIMITS.description, text:
+`Vous partagez un compte Amazon en famille ? Les cadeaux finissent souvent par se trahir dans « Vos commandes ». Psst règle ça : cachez une commande aux personnes de votre choix, elle disparaît de leur historique.
+
+COMMENT ÇA MARCHE
+1. Chaque personne installe Psst dans son propre profil Chrome.
+2. Une personne crée le foyer, les autres le rejoignent avec un code d’invitation.
+3. Dans « Vos commandes », cliquez sur « Cacher cette commande… » et cochez les personnes à qui la cacher.
+
+CE QUE FAIT PSST
+• La commande cachée disparaît de l’historique des personnes concernées, sans laisser de trace.
+• Elle n’apparaît jamais, pas même une fraction de seconde au chargement de la page.
+• Ouverte depuis un e-mail ou un lien (détail, suivi de colis, facture…), elle laisse place à un écran « Pas de spoiler ! ».
+• Date de révélation facultative : la commande redevient visible toute seule le jour choisi.
+• Vous gardez la main : vous voyez à qui chaque commande est cachée, et vous pouvez annuler à tout moment.
+
+VIE PRIVÉE
+• Psst lit uniquement les numéros de commande. Jamais vos identifiants, vos adresses, vos paiements ni le contenu de vos achats.
+• La synchronisation du foyer est chiffrée de bout en bout : notre serveur ne peut lire ni vos commandes, ni vos prénoms.
+• Pas de compte à créer, pas de publicité, pas de pistage.
+• Vous pouvez supprimer toutes les données de votre foyer depuis l’extension.
+
+BON À SAVOIR
+Psst évite les spoilers par inadvertance : il ne cache rien dans l’application mobile Amazon, les e-mails de confirmation, les notifications ou les annonces Alexa.
+
+Fonctionne sur amazon.fr, amazon.com.be, amazon.de, amazon.it, amazon.es, amazon.nl, amazon.co.uk, amazon.ie, amazon.com et amazon.ca.
+
+Psst est un projet indépendant, sans lien avec Amazon. Amazon est une marque d’Amazon.com, Inc. ou de ses filiales.` },
+    { title: 'Résumé (vient du package, pour mémoire)', lang: 'EN', limit: LIMITS.summary, text:
+`Hide gift orders from the people who share your Amazon account. No spoilers, end-to-end encrypted.` },
+    { title: 'Résumé (vient du package, pour mémoire)', lang: 'FR', limit: LIMITS.summary, text:
+`Cachez vos commandes cadeaux aux personnes qui partagent votre compte Amazon. Zéro spoiler, chiffré de bout en bout.` },
+  ];
+
+  const URLS = [
+    { title: 'URL de la page d’accueil', limit: LIMITS.url, text: 'https://pierreribeaucourt.github.io/psst/' },
+    { title: 'URL d’assistance', limit: LIMITS.url, text: 'https://github.com/PierreRibeaucourt/psst/issues' },
+  ];
+
+  const PRIVACY = [
+    { title: 'Description de l’objectif unique', lang: 'FR', limit: LIMITS.purpose, text:
+`Permettre aux personnes qui partagent un même compte Amazon de se cacher certaines commandes (typiquement des cadeaux) dans l’historique « Vos commandes » et sur les pages propres à une commande (détail, suivi de colis, facture, retour). Chaque membre du foyer installe l’extension dans son propre profil Chrome : une commande cachée disparaît de l’historique des personnes à qui elle est cachée. La liste des commandes cachées est synchronisée entre les navigateurs du foyer, chiffrée de bout en bout.` },
+    { title: 'Description de l’objectif unique', lang: 'EN', limit: LIMITS.purpose, text:
+`Let people who share one Amazon account hide some orders from each other (typically gifts) in the “Your Orders” history and on order-specific pages (order details, package tracking, invoice, returns). Each household member installs the extension in their own Chrome profile: a hidden order disappears from the order history of the people it is hidden from. The list of hidden orders is synced between the household’s browsers, end-to-end encrypted.` },
+    { title: 'Justification de l’autorisation storage', lang: 'FR', limit: LIMITS.justification, text:
+`L’extension enregistre localement (chrome.storage.local) l’état du foyer : la clé secrète du foyer générée sur l’appareil, les prénoms des membres, la personne qui utilise ce navigateur, la liste des commandes cachées (numéro de commande, personnes concernées, date de révélation facultative) et l’état de la synchronisation. Ces données sont indispensables pour décider, à chaque chargement d’une page de commandes Amazon, quelles commandes afficher, immédiatement et même hors ligne.` },
+    { title: 'Justification de l’autorisation storage', lang: 'EN', limit: LIMITS.justification, text:
+`The extension stores the household state locally (chrome.storage.local): the household secret key generated on the device, members’ first names, which member uses this browser, the list of hidden orders (order number, who it is hidden from, optional reveal date) and the sync status. This data is required to decide, every time an Amazon order page loads, which orders to show, instantly and even offline.` },
+    { title: 'Justification de l’autorisation alarms', lang: 'FR', limit: LIMITS.justification, text:
+`Une alarme périodique (chrome.alarms, toutes les 15 minutes) déclenche dans le service worker une synchronisation de secours du foyer, pour que les commandes cachées depuis un autre navigateur du foyer soient connues avant la prochaine visite d’une page de commandes. L’extension se synchronise aussi à chaque visite de ces pages ; l’alarme ne sert à rien d’autre.` },
+    { title: 'Justification de l’autorisation alarms', lang: 'EN', limit: LIMITS.justification, text:
+`A periodic alarm (chrome.alarms, every 15 minutes) triggers a background sync of the household in the service worker, so that orders hidden from another browser of the household are known before the next visit to an order page. The extension also syncs on each visit to those pages; the alarm is used for nothing else.` },
+    { title: 'Justification de l’autorisation d’accès à l’hôte', lang: 'FR', limit: LIMITS.justification, text:
+`Les scripts de contenu sont déclarés uniquement sur les sites Amazon pris en charge (amazon.fr, .com.be, .de, .it, .es, .nl, .co.uk, .ie, .com, .ca). Sur les pages de liste des commandes, l’extension masque les commandes cachées à la personne qui utilise le navigateur et ajoute un bouton « Cacher cette commande… ». Sur les autres pages de ces sites, un script vérifie seulement si l’URL contient un numéro de commande (détail, suivi de colis, facture, retour, reçu cadeau) ; si cette commande est cachée, il affiche un écran « Pas de spoiler ! », sinon il ne fait rien. Ces URL étant nombreuses et variables, l’accès à tout le domaine est nécessaire. Seuls les numéros de commande sont lus.` },
+    { title: 'Justification de l’autorisation d’accès à l’hôte', lang: 'EN', limit: LIMITS.justification, text:
+`Content scripts are declared only on the supported Amazon sites (amazon.com, .ca, .co.uk, .ie, .fr, .com.be, .de, .it, .es, .nl). On order list pages, the extension hides the orders hidden from the person using the browser and adds a “Hide this order…” button. On other pages of these sites, a script only checks whether the URL contains an order number (order details, package tracking, invoice, returns, gift receipt); if that order is hidden, it shows a “No spoilers!” screen, otherwise it does nothing. As these URLs are numerous and vary, access to the whole domain is required. Only order numbers are read.` },
+  ];
+
+  const PRIVACY_URL = [{ title: 'URL des règles de confidentialité', limit: LIMITS.url, text: 'https://pierreribeaucourt.github.io/psst/privacy.html' }];
+
+  const TESTING = [{ title: 'Instructions pour l’équipe d’examen', lang: 'EN', limit: LIMITS.testing, text:
+`Psst works on Amazon’s “Your Orders” pages and needs an Amazon account with at least one order. No test credentials are needed: the extension has no account.
+
+To test the full scenario, use two Chrome profiles signed in to the same Amazon account:
+1. Profile A: click the Psst icon, type a first name (e.g. “Alice”) and click “Create”. Copy the invitation code.
+2. Profile B: click the Psst icon, paste the code under “Join a household”, click “Join”, type “Bob” and click “That’s me”.
+3. Profile A: open https://www.amazon.com/gp/css/order-history. Under an order, click “Hide this order…”, keep “Bob” ticked and click “Hide”. The order now shows “Hidden from Bob”.
+4. Profile B: reload the order history. The order is no longer listed. Opening its order-details link shows a “No spoilers!” screen instead.
+5. Profile A: click “Edit” › “Stop hiding”: the order is visible again in profile B after a reload.
+
+The extension also works with a single profile: create a household, add a second person from the popup, then use “change” in the popup to switch who you are.` }];
+
+  function field(f, mount) {
+    const el = document.createElement('div');
+    el.className = 'field';
+    const n = [...f.text].length;
+    el.innerHTML = `<div class="head"><h3></h3>${f.lang ? `<span class="tag ${f.lang === 'EN' ? 'en' : ''}">${f.lang}</span>` : ''}
+      <span class="count ${n > f.limit ? 'over' : ''}">${n} / ${f.limit}</span><button class="copy" type="button">Copier</button></div><pre></pre>`;
+    el.querySelector('h3').textContent = f.title;
+    el.querySelector('pre').textContent = f.text;
+    const btn = el.querySelector('button');
+    btn.addEventListener('click', async () => {
+      try { await navigator.clipboard.writeText(f.text); } catch (e) {
+        const r = document.createRange(); r.selectNodeContents(el.querySelector('pre'));
+        const s = getSelection(); s.removeAllRanges(); s.addRange(r); document.execCommand('copy');
+      }
+      btn.textContent = 'Copié ✓'; btn.classList.add('done');
+      setTimeout(() => { btn.textContent = 'Copier'; btn.classList.remove('done'); }, 1500);
+    });
+    document.getElementById(mount).append(el);
+  }
+  LISTING.forEach((f) => field(f, 'listing'));
+  URLS.forEach((f) => field(f, 'urls'));
+  PRIVACY.forEach((f) => field(f, 'privacy'));
+  PRIVACY_URL.forEach((f) => field(f, 'privacy-url'));
+  TESTING.forEach((f) => field(f, 'testing'));
+
+  for (const lang of ['en', 'fr']) {
+    const box = document.getElementById(`shots-${lang}`);
+    for (let i = 1; i <= 5; i++) {
+      const a = document.createElement('a');
+      a.href = `assets/${lang}/screenshot-${i}.png`;
+      a.innerHTML = `<img src="${a.href}" alt="" loading="lazy">${lang}/screenshot-${i}.png`;
+      box.append(a);
+    }
+  }
+</script>
+</body>
+</html>

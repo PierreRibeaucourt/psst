@@ -1,0 +1,11 @@
+name = "psst-api"
+main = "src/index.ts"
+compatibility_date = "2026-10-01"
+workers_dev = true
+preview_urls = false
+
+[[d1_databases]]
+binding = "DB"
+database_name = "cache-cadeau"
+database_id = "654ea74b-9593-40da-8d11-a8078e5fc928"
+migrations_dir = "migrations"

@@ -1,0 +1,94 @@
+extName: Psst pour Amazon
+extShortName: Psst
+extDescription: Cachez vos commandes cadeaux aux personnes qui partagent votre compte Amazon. Zéro spoiler, chiffré de bout en bout.
+
+bar:
+  hiddenFrom: Cachée à $1
+  revealOn: révélée le $1
+  by: par $1
+  visibleToAll: Visible par tout le foyer
+  hide: Cacher cette commande…
+  edit: Modifier
+  close: Fermer
+  unreadable: Psst n’a pas pu lire cette commande, elle est masquée par précaution. Cliquez pour l’afficher.
+
+panel:
+  setupFirst: Pour cacher une commande, configurez d’abord Psst en cliquant sur son icône, en haut à droite de Chrome.
+  nobodyElse: Personne d’autre dans votre foyer pour l’instant. Ajoutez des personnes depuis l’icône Psst, en haut à droite de Chrome.
+  hideFrom: 'Cacher cette commande à :'
+  revealAuto: Révéler automatiquement le
+  optional: (facultatif)
+  hide: Cacher
+  save: Enregistrer
+  unhide: Ne plus cacher
+  pickSomeone: Cochez au moins une personne.
+
+surprise:
+  docTitle: Surprise !
+  title: Pas de spoiler !
+  text: Quelqu’un de votre foyer vous cache cette commande.
+  back: Revenir à mes commandes
+
+popup:
+  tagline: Cachez vos commandes cadeaux aux personnes qui partagent votre compte Amazon.
+  newHousehold: Nouveau foyer
+  newHouseholdHelp: Vous êtes la première personne du foyer à installer Psst.
+  yourName: Votre prénom
+  create: Créer
+  or: ou
+  join: Rejoindre un foyer
+  joinHelp: Collez le code d’invitation reçu.
+  inviteCode: Code d’invitation
+  joinButton: Rejoindre
+  whoAreYou: Qui êtes-vous ?
+  whoHelp: Sur ce navigateur, Psst cachera ce que les autres vous cachent.
+  current: $1 (actuellement)
+  notListed: Pas dans la liste ?
+  enterName: 'Indiquez votre prénom :'
+  itsMe: C’est moi
+  cancel: Annuler
+  youAre: Vous êtes
+  change: changer
+  household: Votre foyer
+  you: vous
+  remove: retirer
+  removeConfirm: Retirer $1 du foyer ?
+  addPlaceholder: Prénom à ajouter
+  add: Ajouter
+  invite: Inviter quelqu’un
+  inviteHelp: Envoyez ce code à la personne. Elle installe Psst, clique sur « Rejoindre » et le colle.
+  copy: Copier le code
+  copied: Copié ✓
+  hiddenCount:
+    1: 1 commande cachée par vous.
+    n: $1 commandes cachées par vous.
+  howTo: Pour cacher une commande, ouvrez « Vos commandes » sur Amazon et cliquez sur « Cacher cette commande… ».
+  localMode: 'Mode local : pas de synchronisation.'
+  syncError: 'Échec de la synchro : $1'
+  synced: Synchronisé $1
+  syncing: Synchronisation…
+  leave: Quitter le foyer
+  delete: Supprimer le foyer pour tout le monde
+  deleteConfirm: Supprimer définitivement ce foyer et toutes ses données du serveur, pour tous les membres ? C’est irréversible.
+  leaveConfirm: Quitter le foyer ? Les commandes cachées ne le seront plus sur ce navigateur.
+  justNow: à l’instant
+
+err:
+  noResponse: Pas de réponse de l’extension.
+  enterName: Indiquez votre prénom.
+  alreadyInHousehold: Vous faites déjà partie d’un foyer.
+  badCode: Ce code d’invitation n’est pas valide.
+  syncDisabled: La synchronisation n’est pas activée dans cette version.
+  leaveFirst: Quittez d’abord votre foyer actuel.
+  unknownHousehold: Aucun foyer ne correspond à ce code.
+  memberGone: Cette personne n’est plus dans le foyer.
+  enterAName: Indiquez un prénom.
+  createFirst: Créez d’abord votre foyer.
+  nameTaken: $1 fait déjà partie du foyer.
+  cantRemoveSelf: Vous ne pouvez pas vous retirer vous-même.
+  badOrder: N° de commande illisible.
+  badDate: Date invalide.
+  setupFirst: Configurez d’abord Psst.
+  offline: Serveur injoignable.
+  server: Erreur du serveur ($1).
+  householdDeleted: Ce foyer a été supprimé par l’un de ses membres. Vous pouvez le quitter.

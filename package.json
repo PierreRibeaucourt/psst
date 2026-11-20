@@ -1,0 +1,28 @@
+{
+  "name": "psst-for-amazon",
+  "description": "Psst for Amazon: hide gift orders from the people who share your Amazon account",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "wxt",
+    "build": "wxt build",
+    "zip": "wxt zip",
+    "postinstall": "wxt prepare",
+    "typecheck": "tsc --noEmit",
+    "fixture": "node scripts/make-fixture.mjs",
+    "test": "vitest run",
+    "e2e": "playwright test",
+    "store": "node scripts/make-fixture-en.mjs && playwright test -c playwright.store.config.ts",
+    "icons": "node scripts/make-icons.mjs",
+    "brand": "python -I scripts/make-brand.py"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.65.1",
+    "@wxt-dev/i18n": "^0.2.8",
+    "happy-dom": "^21.0.4",
+    "typescript": "^5.9.3",
+    "vitest": "^5.1.1",
+    "wxt": "^0.21.5"
+  }
+}

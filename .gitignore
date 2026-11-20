@@ -1,0 +1,18 @@
+# Export brut de la page Amazon : noms, adresses, vrais n° de commande. Ne jamais publier.
+Vos commandes.html
+Vos commandes_files/
+Your Orders.html
+Your Orders_files/
+
+node_modules/
+.output/
+.wxt/
+test-results/
+playwright-report/
+server/.wrangler/
+server/node_modules/
+*.log
+.output-e2e/
+
+# Exemple de fiche Store d'une autre extension (e-mail perso, pages du tableau de bord) : ne pas publier.
+Chrome store kit/

@@ -1,0 +1,31 @@
+/*
+ * Injecté par le manifeste, donc avant le premier affichage de la page :
+ * aucune carte n'apparaît tant que Psst n'a pas décidé si on peut la montrer.
+ */
+.js-order-card:not([data-cc-state]),
+.order-card:not([data-cc-state]) {
+  visibility: hidden !important;
+}
+
+[data-cc-state='hidden'] {
+  display: none !important;
+}
+
+/* N° de commande introuvable (Amazon a changé sa page) : masqué par précaution. */
+[data-cc-state='unreadable'] {
+  cursor: pointer;
+}
+[data-cc-state='unreadable'] > * {
+  display: none !important;
+}
+[data-cc-state='unreadable']::before {
+  content: attr(data-cc-msg);
+  display: block;
+  margin-bottom: 14px;
+  padding: 12px 16px;
+  border: 1px dashed #ff9f1c;
+  border-radius: 8px;
+  color: #1b2738;
+  background: #fff6e9;
+  font-size: 13px;
+}

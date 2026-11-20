@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Charte graphique Psst</title>
+  <link rel="icon" href="mark.svg" type="image/svg+xml">
+  <style>
+    @font-face { font-family: Nunito; src: url('fonts/Nunito-VariableFont_wght.ttf') format('truetype'); font-weight: 200 1000; }
+    :root {
+      --navy: #1B2738; --navy-soft: #2E3D55; --orange: #FF9F1C; --orange-deep: #E8850C;
+      --cream: #FFF6E9; --sand: #F3E2C7; --peach: #FFE3B8; --ink: #0F1720; --muted: #5B6472; --danger: #B3261E;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #fff; color: var(--ink); font: 16px/1.6 Nunito, system-ui, sans-serif; font-weight: 500; }
+    .wrap { max-width: 1040px; margin: 0 auto; padding: 0 24px 80px; }
+    header { padding: 48px 0 24px; border-bottom: 1px solid var(--sand); margin-bottom: 8px; }
+    header img { height: 56px; }
+    h1 { font-size: 40px; font-weight: 900; color: var(--navy); margin: 18px 0 6px; letter-spacing: -.02em; }
+    h2 { font-size: 26px; font-weight: 900; color: var(--navy); margin: 56px 0 8px; letter-spacing: -.01em; }
+    h3 { font-size: 17px; font-weight: 800; color: var(--navy); margin: 22px 0 6px; }
+    p.lead { color: var(--muted); font-size: 18px; margin: 0; }
+    .grid { display: grid; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+    .tile { border-radius: 16px; padding: 28px; display: grid; place-items: center; min-height: 170px; border: 1px solid var(--sand); }
+    .tile img { max-width: 100%; max-height: 90px; }
+    .caption { font-size: 14px; color: var(--muted); margin-top: 8px; }
+    .swatch { border-radius: 14px; overflow: hidden; border: 1px solid var(--sand); }
+    .swatch .c { height: 96px; }
+    .swatch .t { padding: 10px 14px; font-size: 14px; }
+    .swatch b { display: block; color: var(--navy); }
+    code { font-family: ui-monospace, Consolas, monospace; font-size: 13px; background: var(--cream); padding: 1px 6px; border-radius: 5px; }
+    table { border-collapse: collapse; width: 100%; font-size: 15px; }
+    th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--sand); vertical-align: top; }
+    th { color: var(--navy); }
+    .do, .dont { border-radius: 14px; padding: 18px 22px; }
+    .do { background: #EAF6EE; } .dont { background: #FBECEA; }
+    .do h3 { color: #1D7A3C; margin-top: 0; } .dont h3 { color: var(--danger); margin-top: 0; }
+    ul { padding-left: 20px; margin: 0; } li + li { margin-top: 4px; }
+    .type-sample { font-family: Nunito; color: var(--navy); }
+    .btn { display: inline-block; border-radius: 999px; padding: 6px 15px; font: 700 14px Arial, sans-serif; margin-right: 8px; }
+    .btn.p { background: var(--orange); color: var(--navy); }
+    .btn.s { background: #fff; color: var(--navy); border: 1px solid #D5D9D9; font-weight: 400; }
+    .bar { display: flex; align-items: center; gap: 10px; padding: 8px 18px; background: var(--cream); border: 1px solid #D5D9D9;
+      border-radius: 10px; font: 13px Arial, sans-serif; }
+    .bar img { width: 18px; } .bar .badge { color: var(--navy); font-weight: 700; } .bar .m { color: var(--muted); } .bar .sp { flex: 1; }
+    .clear { position: relative; display: inline-block; padding: 32px; border: 2px dashed var(--orange); border-radius: 8px; }
+    .clear img { height: 96px; display: block; outline: 1px solid rgba(27,39,56,.15); }
+    figure { margin: 0; }
+    .shots { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+    .shots img { width: 100%; border-radius: 10px; box-shadow: 0 8px 24px rgba(27,39,56,.12); }
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <img src="logo.svg" alt="Psst">
+    <h1>Charte graphique</h1>
+    <p class="lead">Psst pour Amazon / Psst for Amazon : cacher les cadeaux aux personnes qui partagent votre compte Amazon.
+      Une identité chaleureuse et discrète, qui s’intègre dans les pages d’Amazon sans jamais s’y confondre.</p>
+  </header>
+
+  <h2>Le nom</h2>
+  <p><strong>Psst</strong> : l’onomatopée du secret, identique en français et en anglais. Toujours écrit <code>Psst</code> dans un texte
+    (majuscule initiale, sans point d’exclamation), et <code>psst</code> en minuscules dans le logo. Sur le Chrome Web Store :
+    « Psst pour Amazon » / « Psst for Amazon ». Ne jamais commencer le nom par « Amazon ».</p>
+
+  <h2>Le logo</h2>
+  <p>Une bulle de dialogue en forme de paquet cadeau : un cadeau qui chuchote. Bulle bleu nuit, ruban et nœud orange.</p>
+  <div class="grid">
+    <figure><div class="tile" style="background:#fff"><img src="logo.svg" alt="Logo principal"></div>
+      <figcaption class="caption">Logo principal, sur fond clair. <code>logo.svg</code></figcaption></figure>
+    <figure><div class="tile" style="background:var(--navy);border-color:var(--navy)"><img src="logo-reverse.svg" alt="Logo inversé"></div>
+      <figcaption class="caption">Logo inversé, sur fond bleu nuit ou sombre. <code>logo-reverse.svg</code></figcaption></figure>
+    <figure><div class="tile" style="background:var(--cream)"><img src="mark.svg" alt="Symbole"></div>
+      <figcaption class="caption">Symbole seul : icônes, favicon, avatar. <code>mark.svg</code></figcaption></figure>
+    <figure><div class="tile" style="background:var(--navy);border-color:var(--navy)"><img src="mark-reverse.svg" alt="Symbole inversé"></div>
+      <figcaption class="caption">Symbole inversé. <code>mark-reverse.svg</code></figcaption></figure>
+  </div>
+
+  <h3>Zone de protection et tailles minimales</h3>
+  <div style="display:flex;gap:32px;align-items:center;flex-wrap:wrap">
+    <div class="clear"><img src="logo.svg" alt=""></div>
+    <ul>
+      <li>Laisser autour du logo une marge au moins égale à la moitié de la hauteur de la bulle.</li>
+      <li>Symbole seul : 16 px minimum (icône de barre d’outils).</li>
+      <li>Logo complet : 80 px de large minimum, 24 px de haut à l’écran.</li>
+      <li>Le mot « psst » est vectorisé (Nunito Black) : ne pas le recomposer avec une autre police.</li>
+    </ul>
+  </div>
+
+  <h2>Couleurs</h2>
+  <div class="grid">
+    <div class="swatch"><div class="c" style="background:#1B2738"></div><div class="t"><b>Bleu nuit</b><code>#1B2738</code><br>Logo, titres, texte sur orange, fonds sombres.</div></div>
+    <div class="swatch"><div class="c" style="background:#FF9F1C"></div><div class="t"><b>Orange cadeau</b><code>#FF9F1C</code><br>Ruban, bouton principal, accents. Jamais pour du texte sur fond clair.</div></div>
+    <div class="swatch"><div class="c" style="background:#E8850C"></div><div class="t"><b>Orange profond</b><code>#E8850C</code><br>Survol du bouton principal.</div></div>
+    <div class="swatch"><div class="c" style="background:#FFF6E9"></div><div class="t"><b>Crème</b><code>#FFF6E9</code><br>Fond de la barre Psst, des visuels et du site.</div></div>
+    <div class="swatch"><div class="c" style="background:#F3E2C7"></div><div class="t"><b>Sable</b><code>#F3E2C7</code><br>Bordures et séparateurs sur crème.</div></div>
+    <div class="swatch"><div class="c" style="background:#FFE3B8"></div><div class="t"><b>Pêche</b><code>#FFE3B8</code><br>Formes décoratives des visuels.</div></div>
+    <div class="swatch"><div class="c" style="background:#2E3D55"></div><div class="t"><b>Bleu nuit doux</b><code>#2E3D55</code><br>Bordures et surfaces en mode sombre.</div></div>
+    <div class="swatch"><div class="c" style="background:#5B6472"></div><div class="t"><b>Gris texte</b><code>#5B6472</code><br>Textes secondaires.</div></div>
+  </div>
+  <p class="caption">Contrastes : bleu nuit sur orange 7,3:1, bleu nuit sur crème 14,1:1, gris texte sur crème 5,6:1 (AA). L’orange sur blanc (2,1:1) est réservé aux formes, jamais au texte.</p>
+
+  <h2>Typographie</h2>
+  <table>
+    <tr><th>Usage</th><th>Police</th><th>Exemple</th></tr>
+    <tr><td>Titres, visuels, site</td><td>Nunito Black (900) et ExtraBold (800), licence libre OFL, fichier dans <code>fonts/</code></td>
+      <td class="type-sample" style="font-weight:900;font-size:26px">Pas de spoiler !</td></tr>
+    <tr><td>Texte courant du site et des visuels</td><td>Nunito SemiBold (600)</td>
+      <td class="type-sample" style="font-weight:600">Les cadeaux restent une surprise.</td></tr>
+    <tr><td>Fenêtre de l’extension</td><td>Police système (Segoe UI, San Francisco, Roboto)</td>
+      <td style="font-family:system-ui">Vous êtes Leo · changer</td></tr>
+    <tr><td>Dans les pages Amazon</td><td>Celle de la page (hérite d’Amazon), 13 px</td>
+      <td style="font:13px Arial">Cachée à Emma</td></tr>
+  </table>
+
+  <h2>Composants</h2>
+  <h3>Barre Psst (sous l’en-tête de chaque commande)</h3>
+  <div class="bar"><img src="mark.svg" alt=""><span class="badge">Cachée à Emma</span><span class="m">· révélée le 26 déc. 2026</span><span class="sp"></span><span class="btn s">Modifier</span></div>
+  <h3>Boutons</h3>
+  <p><span class="btn p">Cacher</span><span class="btn s">Ne plus cacher</span></p>
+  <ul>
+    <li>Principal : fond orange, texte bleu nuit en gras, forme pilule. Une seule action principale par zone.</li>
+    <li>Secondaire : fond blanc, bordure grise <code>#D5D9D9</code>, texte bleu nuit, comme les boutons secondaires d’Amazon.</li>
+  </ul>
+
+  <h2>Ton</h2>
+  <ul>
+    <li>Complice et léger, jamais niais : « Pas de spoiler ! », « Les cadeaux restent une surprise ».</li>
+    <li>Vouvoiement en français. Phrases courtes, verbes d’action : « Cacher », « Rejoindre », « Ne plus cacher ».</li>
+    <li>Honnête sur les limites : Psst évite les spoilers par inadvertance, ce n’est pas un coffre-fort.</li>
+    <li>Prénoms d’exemple : Emma et Leo. Jamais de vrais prénoms, de vrais produits ni de vrais n° de commande dans les supports publics : un historique d’achats est personnel, et il peut contenir des cadeaux.</li>
+  </ul>
+
+  <h2>Psst et Amazon</h2>
+  <div class="grid">
+    <div class="do"><h3>À faire</h3><ul>
+      <li>Une palette qui va avec Amazon (bleu nuit, orange) sans la copier.</li>
+      <li>Nommer Amazon pour dire où l’extension fonctionne : « Psst pour Amazon ».</li>
+      <li>Mentionner « projet indépendant, sans lien avec Amazon » sur le site et la fiche du Store.</li>
+      <li>Montrer de vraies pages « Vos commandes » dans les captures, avec des données anonymisées.</li>
+    </ul></div>
+    <div class="dont"><h3>À ne pas faire</h3><ul>
+      <li>Utiliser le logo Amazon, le sourire-flèche ou le « a » d’Amazon.</li>
+      <li>Utiliser la police Amazon Ember (propriétaire) dans nos propres supports.</li>
+      <li>Commencer le nom par « Amazon » ou laisser croire à une extension officielle.</li>
+      <li>Montrer de vraies données personnelles (noms, adresses, n° de commande) dans les visuels.</li>
+    </ul></div>
+  </div>
+
+  <h2>Visuels du Store</h2>
+  <p>Fond crème, logo en haut à gauche, titre en Nunito Black bleu nuit, sous-titre gris, capture réelle à droite qui déborde du cadre.
+    Les bannières sont sur fond bleu nuit avec le logo inversé. Fichiers et script : <code>store/</code>.</p>
+  <div class="shots">
+    <img src="../store/assets/fr/screenshot-1.png" alt="Capture 1">
+    <img src="../store/assets/fr/marquee-1400x560.png" alt="Bannière">
+  </div>
+</div>
+</body>
+</html>

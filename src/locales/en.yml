@@ -1,0 +1,94 @@
+extName: Psst for Amazon
+extShortName: Psst
+extDescription: Hide gift orders from the people who share your Amazon account. No spoilers, end-to-end encrypted.
+
+bar:
+  hiddenFrom: Hidden from $1
+  revealOn: revealed on $1
+  by: by $1
+  visibleToAll: Visible to everyone in your household
+  hide: Hide this order…
+  edit: Edit
+  close: Close
+  unreadable: Psst couldn’t read this order, so it’s hidden just in case. Click to show it.
+
+panel:
+  setupFirst: To hide an order, set up Psst first by clicking its icon at the top right of Chrome.
+  nobodyElse: Nobody else is in your household yet. Add people from the Psst icon at the top right of Chrome.
+  hideFrom: 'Hide this order from:'
+  revealAuto: Reveal automatically on
+  optional: (optional)
+  hide: Hide
+  save: Save
+  unhide: Stop hiding
+  pickSomeone: Tick at least one person.
+
+surprise:
+  docTitle: Surprise!
+  title: No spoilers!
+  text: Someone in your household is hiding this order from you.
+  back: Back to my orders
+
+popup:
+  tagline: Hide gift orders from the people who share your Amazon account.
+  newHousehold: New household
+  newHouseholdHelp: You’re the first person in your household to install Psst.
+  yourName: Your first name
+  create: Create
+  or: or
+  join: Join a household
+  joinHelp: Paste the invitation code you received.
+  inviteCode: Invitation code
+  joinButton: Join
+  whoAreYou: Who are you?
+  whoHelp: On this browser, Psst will hide what the others are hiding from you.
+  current: $1 (current)
+  notListed: Not in the list?
+  enterName: 'Enter your first name:'
+  itsMe: That’s me
+  cancel: Cancel
+  youAre: You are
+  change: change
+  household: Your household
+  you: you
+  remove: remove
+  removeConfirm: Remove $1 from the household?
+  addPlaceholder: Name to add
+  add: Add
+  invite: Invite someone
+  inviteHelp: Send this code to the person. They install Psst, click “Join” and paste it.
+  copy: Copy code
+  copied: Copied ✓
+  hiddenCount:
+    1: 1 order hidden by you.
+    n: $1 orders hidden by you.
+  howTo: To hide an order, open “Your Orders” on Amazon and click “Hide this order…”.
+  localMode: 'Local mode: no sync.'
+  syncError: 'Sync failed: $1'
+  synced: Synced $1
+  syncing: Syncing…
+  leave: Leave household
+  delete: Delete this household for everyone
+  deleteConfirm: Permanently delete this household and all its data from the server, for every member? This cannot be undone.
+  leaveConfirm: Leave the household? Hidden orders will no longer be hidden on this browser.
+  justNow: just now
+
+err:
+  noResponse: No response from the extension.
+  enterName: Enter your first name.
+  alreadyInHousehold: You’re already in a household.
+  badCode: This invitation code isn’t valid.
+  syncDisabled: Sync is not enabled in this version.
+  leaveFirst: Leave your current household first.
+  unknownHousehold: No household matches this code.
+  memberGone: This person is no longer in the household.
+  enterAName: Enter a first name.
+  createFirst: Create your household first.
+  nameTaken: $1 is already in the household.
+  cantRemoveSelf: You can’t remove yourself.
+  badOrder: Unreadable order number.
+  badDate: Invalid date.
+  setupFirst: Set up Psst first.
+  offline: Can’t reach the server.
+  server: Server error ($1).
+  householdDeleted: This household was deleted by one of its members. You can leave it.

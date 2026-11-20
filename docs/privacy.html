@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en" data-lang="en" data-title-fr="Politique de confidentialité · Psst pour Amazon" data-title-en="Privacy policy · Psst for Amazon">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy policy · Psst for Amazon</title>
+  <meta name="description" content="What Psst for Amazon does with your data: order numbers stay in your browser, sync is end-to-end encrypted, no tracking.">
+  <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="stylesheet" href="assets/site.css">
+  <script src="assets/lang.js"></script>
+</head>
+<body>
+  <div class="wrap">
+    <header class="top">
+      <a class="logo" href="./"><img src="assets/logo.svg" alt="Psst"></a>
+      <div class="langs" role="group" aria-label="Langue / Language">
+        <button type="button" data-set-lang="fr" aria-pressed="false">FR</button>
+        <button type="button" data-set-lang="en" aria-pressed="true">EN</button>
+      </div>
+    </header>
+
+    <!-- ========================= ENGLISH ========================= -->
+    <main class="doc" lang="en">
+      <h1>Privacy policy</h1>
+      <p class="updated">Psst for Amazon · Last updated: November 20, 2026</p>
+
+      <div class="card">
+        <strong>In short:</strong> Psst reads order numbers on Amazon’s order pages to decide what to show you. It never reads your
+        Amazon password, payment details, addresses or what you bought. To sync your household, it sends only end-to-end
+        encrypted data to our server, which cannot read it. No ads, no analytics, no tracking, no data sold.
+      </div>
+
+      <h2>Who we are</h2>
+      <p>Psst for Amazon (“Psst”) is a browser extension published by Pierre Ribeaucourt, an individual developer based in France.
+        Contact: <a href="mailto:pierre@ribeaucourt.fr">pierre@ribeaucourt.fr</a>.</p>
+
+      <h2>What Psst does</h2>
+      <p>Psst lets people who share one Amazon account hide some orders from each other, for example gifts. Each person installs
+        Psst in their own browser; a hidden order disappears from the order history of the people it is hidden from.</p>
+
+      <h2>Data processed in your browser</h2>
+      <ul>
+        <li><strong>Order numbers</strong> displayed on Amazon order pages (such as “Your Orders”, order details, package tracking),
+          read only to decide whether each order should be shown. Psst does not read or store product names, prices, delivery
+          addresses, payment information or your Amazon credentials.</li>
+        <li><strong>First names</strong> you enter for the members of your household.</li>
+        <li><strong>Your hidden orders:</strong> order number, who it is hidden from, who hid it and an optional reveal date.</li>
+        <li><strong>Your household’s secret key</strong>, created in your browser.</li>
+      </ul>
+      <p>This data is stored in your browser’s extension storage.</p>
+
+      <h2>Data sent to our server</h2>
+      <p>To keep a household in sync across its members’ browsers, Psst sends records to a server we operate on Cloudflare
+        Workers, with a database located in Western Europe. Each record (a member’s first name, or a hidden order with the people
+        it is hidden from and its reveal date) is <strong>encrypted in your browser</strong> with AES-256-GCM, using a key derived
+        from your household’s secret key. That key never leaves your household’s browsers: you share it yourselves through the
+        invitation code.</p>
+      <p>The server stores only a random household identifier, a hash of the household’s access token, the encrypted records,
+        technical sequence numbers and the household’s creation date. It cannot read order numbers, first names, or who hides what
+        from whom.</p>
+      <p>As with any web request, Cloudflare processes your IP address to deliver requests to the server. We do not log, store or
+        use IP addresses.</p>
+
+      <h2>What we don’t do</h2>
+      <ul>
+        <li>No advertising, no analytics, no tracking, no cookies.</li>
+        <li>We do not sell or transfer user data to third parties.</li>
+        <li>We do not use or transfer user data for purposes unrelated to Psst’s single purpose.</li>
+        <li>We do not use or transfer user data to determine creditworthiness or for lending purposes.</li>
+      </ul>
+      <p>Psst’s use of data complies with the Chrome Web Store User Data Policy, including the Limited Use requirements.</p>
+
+      <h2>Retention and deletion</h2>
+      <ul>
+        <li>Data in your browser stays until you leave your household or uninstall Psst.</li>
+        <li>Encrypted data on the server stays until a household member chooses <em>“Delete this household for everyone”</em> in
+          the extension, which permanently erases the household and all its records from the server.</li>
+        <li>Leaving a household only deletes the data stored in your browser.</li>
+      </ul>
+
+      <h2>Your rights</h2>
+      <p>Under the GDPR and similar laws, you have the right to access, correct and delete your data. Because the data on our
+        server is encrypted and not linked to any identity, we cannot find it for you: you can view and edit everything in the
+        extension, and delete it with the options above. For any question, write to
+        <a href="mailto:pierre@ribeaucourt.fr">pierre@ribeaucourt.fr</a>. You can also lodge a complaint with your data
+        protection authority (in France, the CNIL).</p>
+
+      <h2>Changes</h2>
+      <p>If this policy changes, we will update this page and its date. Significant changes will be described in the extension’s
+        release notes.</p>
+
+      <p class="updated">Amazon is a trademark of Amazon.com, Inc. or its affiliates. Psst is an independent project, not affiliated
+        with, endorsed or sponsored by Amazon.</p>
+    </main>
+
+    <!-- ========================= FRANÇAIS ========================= -->
+    <main class="doc" lang="fr">
+      <h1>Politique de confidentialité</h1>
+      <p class="updated">Psst pour Amazon · Dernière mise à jour : 20 novembre 2026</p>
+
+      <div class="card">
+        <strong>En bref :</strong> Psst lit les numéros de commande sur les pages de commandes d’Amazon pour décider quoi vous
+        afficher. Il ne lit jamais votre mot de passe Amazon, vos moyens de paiement, vos adresses ni ce que vous avez acheté.
+        Pour synchroniser votre foyer, il n’envoie à notre serveur que des données chiffrées de bout en bout, que ce serveur ne
+        peut pas lire. Pas de publicité, pas de mesure d’audience, pas de pistage, aucune donnée vendue.
+      </div>
+
+      <h2>Qui sommes-nous</h2>
+      <p>Psst pour Amazon (« Psst ») est une extension de navigateur publiée par Pierre Ribeaucourt, développeur indépendant établi
+        en France. Contact : <a href="mailto:pierre@ribeaucourt.fr">pierre@ribeaucourt.fr</a>.</p>
+
+      <h2>Ce que fait Psst</h2>
+      <p>Psst permet aux personnes qui partagent un même compte Amazon de se cacher certaines commandes, par exemple des cadeaux.
+        Chaque personne installe Psst dans son propre navigateur ; une commande cachée disparaît de l’historique des personnes à
+        qui elle est cachée.</p>
+
+      <h2>Données traitées dans votre navigateur</h2>
+      <ul>
+        <li><strong>Les numéros de commande</strong> affichés sur les pages de commandes d’Amazon (« Vos commandes », détail d’une
+          commande, suivi de colis…), lus uniquement pour décider s’il faut afficher chaque commande. Psst ne lit ni ne conserve
+          les noms des produits, les prix, les adresses de livraison, les informations de paiement ni vos identifiants Amazon.</li>
+        <li><strong>Les prénoms</strong> que vous saisissez pour les membres de votre foyer.</li>
+        <li><strong>Vos commandes cachées :</strong> numéro de commande, personnes à qui elle est cachée, personne qui l’a cachée
+          et date de révélation facultative.</li>
+        <li><strong>La clé secrète de votre foyer</strong>, créée dans votre navigateur.</li>
+      </ul>
+      <p>Ces données sont stockées dans l’espace de stockage de l’extension, dans votre navigateur.</p>
+
+      <h2>Données envoyées à notre serveur</h2>
+      <p>Pour synchroniser un foyer entre les navigateurs de ses membres, Psst envoie des enregistrements à un serveur que nous
+        exploitons sur Cloudflare Workers, avec une base de données située en Europe de l’Ouest. Chaque enregistrement (le prénom
+        d’un membre, ou une commande cachée avec les personnes à qui elle est cachée et sa date de révélation) est
+        <strong>chiffré dans votre navigateur</strong> en AES-256-GCM, avec une clé dérivée de la clé secrète de votre foyer.
+        Cette clé ne quitte jamais les navigateurs de votre foyer : vous la partagez vous-mêmes avec le code d’invitation.</p>
+      <p>Le serveur ne conserve qu’un identifiant de foyer aléatoire, une empreinte du jeton d’accès du foyer, les enregistrements
+        chiffrés, des numéros de séquence techniques et la date de création du foyer. Il ne peut lire ni les numéros de commande,
+        ni les prénoms, ni qui cache quoi à qui.</p>
+      <p>Comme pour toute requête web, Cloudflare traite votre adresse IP pour acheminer les requêtes jusqu’au serveur. Nous ne
+        journalisons, ne conservons ni n’utilisons les adresses IP.</p>
+
+      <h2>Ce que nous ne faisons pas</h2>
+      <ul>
+        <li>Pas de publicité, pas de mesure d’audience, pas de pistage, pas de cookies.</li>
+        <li>Nous ne vendons ni ne transférons les données des utilisateurs à des tiers.</li>
+        <li>Nous n’utilisons ni ne transférons les données des utilisateurs à des fins sans rapport avec l’objectif unique de Psst.</li>
+        <li>Nous n’utilisons ni ne transférons les données des utilisateurs pour évaluer leur solvabilité ou à des fins de prêt.</li>
+      </ul>
+      <p>L’utilisation des données par Psst respecte le règlement du Chrome Web Store sur les données utilisateur, y compris les
+        exigences d’utilisation limitée (« Limited Use »).</p>
+
+      <h2>Conservation et suppression</h2>
+      <ul>
+        <li>Les données de votre navigateur sont conservées jusqu’à ce que vous quittiez votre foyer ou désinstalliez Psst.</li>
+        <li>Les données chiffrées sur le serveur sont conservées jusqu’à ce qu’un membre du foyer choisisse
+          <em>« Supprimer le foyer pour tout le monde »</em> dans l’extension, ce qui efface définitivement le foyer et tous ses
+          enregistrements du serveur.</li>
+        <li>Quitter un foyer supprime uniquement les données stockées dans votre navigateur.</li>
+      </ul>
+
+      <h2>Vos droits</h2>
+      <p>Le RGPD vous donne un droit d’accès, de rectification et d’effacement de vos données. Comme les données de notre serveur
+        sont chiffrées et rattachées à aucune identité, nous ne pouvons pas les retrouver pour vous : vous pouvez tout consulter
+        et modifier dans l’extension, et tout supprimer avec les options ci-dessus. Pour toute question, écrivez à
+        <a href="mailto:pierre@ribeaucourt.fr">pierre@ribeaucourt.fr</a>. Vous pouvez aussi adresser une réclamation à la CNIL.</p>
+
+      <h2>Modifications</h2>
+      <p>Si cette politique change, nous mettrons à jour cette page et sa date. Les changements importants seront décrits dans les
+        notes de version de l’extension.</p>
+
+      <p class="updated">Amazon est une marque d’Amazon.com, Inc. ou de ses filiales. Psst est un projet indépendant, sans lien
+        avec Amazon, qui ne l’approuve ni ne le parraine.</p>
+    </main>
+  </div>
+</body>
+</html>
